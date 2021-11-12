@@ -81,7 +81,7 @@ $navbar-colors: $colors !default
         .bu-navbar-link
           &::after
             border-color: $color-invert
-      .nbu-avbar-burger
+      .bu-navbar-burger
         color: $color-invert
       +from($navbar-breakpoint)
         .bu-navbar-start,
@@ -99,9 +99,9 @@ $navbar-colors: $colors !default
           .bu-navbar-link
             &::after
               border-color: $color-invert
-        .navbar-item.has-dropdown:focus .bu-navbar-link,
-        .navbar-item.has-dropdown:hover .bu-navbar-link,
-        .navbar-item.has-dropdown.is-active .bu-navbar-link
+        .bu-navbar-item.has-dropdown:focus .bu-navbar-link,
+        .bu-navbar-item.has-dropdown:hover .bu-navbar-link,
+        .bu-navbar-item.has-dropdown.is-active .bu-navbar-link
           background-color: bulmaDarken($color, 5%)
           color: $color-invert
         .bu-navbar-dropdown
@@ -109,7 +109,7 @@ $navbar-colors: $colors !default
             &.is-active
               background-color: $color
               color: $color-invert
-  & > .container
+  & > .bu-container
     align-items: stretch
     display: flex
     min-height: $navbar-height
@@ -308,7 +308,7 @@ a.bu-navbar-item,
         &.is-hoverable:hover
           .navbar-link
             background-color: transparent !important
-      .navbar-dropdown
+      .bu-navbar-dropdown
         a.bu-navbar-item
           &:focus,
           &:hover
