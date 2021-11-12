@@ -30,7 +30,7 @@ $panel-block-active-icon-color: $link !default
 $panel-icon-color: $text-light !default
 $panel-colors: $colors !default
 
-.panel
+.bu-panel
   border-radius: $panel-radius
   box-shadow: $panel-shadow
   font-size: $size-normal
@@ -41,20 +41,20 @@ $panel-colors: $colors !default
     $color: nth($components, 1)
     $color-invert: nth($components, 2)
     &.is-#{$name}
-      .panel-heading
+      .bu-panel-heading
         background-color: $color
         color: $color-invert
-      .panel-tabs a.is-active
+      .bu-panel-tabs a.is-active
         border-bottom-color: $color
-      .panel-block.is-active .panel-icon
+      .bu-panel-block.is-active .panel-icon
         color: $color
 
-.panel-tabs,
-.panel-block
+.bu-panel-tabs,
+.bu-panel-block
   &:not(:last-child)
     border-bottom: $panel-item-border
 
-.panel-heading
+.bu-panel-heading
   background-color: $panel-heading-background-color
   border-radius: $panel-radius $panel-radius 0 0
   color: $panel-heading-color
@@ -63,7 +63,7 @@ $panel-colors: $colors !default
   line-height: $panel-heading-line-height
   padding: $panel-heading-padding
 
-.panel-tabs
+.bu-panel-tabs
   align-items: flex-end
   display: flex
   font-size: $panel-tabs-font-size
@@ -77,13 +77,13 @@ $panel-colors: $colors !default
       border-bottom-color: $panel-tab-active-border-bottom-color
       color: $panel-tab-active-color
 
-.panel-list
+.bu-panel-list
   a
     color: $panel-list-item-color
     &:hover
       color: $panel-list-item-hover-color
 
-.panel-block
+.bu-panel-block
   align-items: center
   color: $panel-block-color
   display: flex
@@ -91,7 +91,7 @@ $panel-colors: $colors !default
   padding: 0.5em 0.75em
   input[type="checkbox"]
     +ltr-property("margin", 0.75em)
-  & > .control
+  & > .bu-control
     flex-grow: 1
     flex-shrink: 1
     width: 100%
@@ -100,19 +100,19 @@ $panel-colors: $colors !default
   &.is-active
     border-left-color: $panel-block-active-border-left-color
     color: $panel-block-active-color
-    .panel-icon
+    .bu-panel-icon
       color: $panel-block-active-icon-color
   &:last-child
     border-bottom-left-radius: $panel-radius
     border-bottom-right-radius: $panel-radius
 
-a.panel-block,
-label.panel-block
+a.bu-panel-block,
+label.bu-panel-block
   cursor: pointer
   &:hover
     background-color: $panel-block-hover-background-color
 
-.panel-icon
+.bu-panel-icon
   +fa(14px, 1em)
   color: $panel-icon-color
   +ltr-property("margin", 0.75em)

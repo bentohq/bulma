@@ -20,7 +20,7 @@ $card-footer-padding: 0.75rem !default
 
 $card-media-margin: $block-spacing !default
 
-.card
+.bu-card
   background-color: $card-background-color
   border-radius: $card-radius
   box-shadow: $card-shadow
@@ -36,14 +36,14 @@ $card-media-margin: $block-spacing !default
     border-bottom-left-radius: $card-radius
     border-bottom-right-radius: $card-radius
 
-.card-header
+.bu-card-header
   @extend %card-item
   background-color: $card-header-background-color
   align-items: stretch
   box-shadow: $card-header-shadow
   display: flex
 
-.card-header-title
+.bu-card-header-title
   align-items: center
   color: $card-header-color
   display: flex
@@ -53,7 +53,7 @@ $card-media-margin: $block-spacing !default
   &.is-centered
     justify-content: center
 
-.card-header-icon
+.bu-card-header-icon
   +reset
   align-items: center
   cursor: pointer
@@ -61,7 +61,7 @@ $card-media-margin: $block-spacing !default
   justify-content: center
   padding: $card-header-padding
 
-.card-image
+.bu-card-image
   display: block
   position: relative
   &:first-child
@@ -73,19 +73,19 @@ $card-media-margin: $block-spacing !default
       border-bottom-left-radius: $card-radius
       border-bottom-right-radius: $card-radius
 
-.card-content
+.bu-card-content
   @extend %card-item
   background-color: $card-content-background-color
   padding: $card-content-padding
 
-.card-footer
+.bu-card-footer
   @extend %card-item
   background-color: $card-footer-background-color
   border-top: $card-footer-border-top
   align-items: stretch
   display: flex
 
-.card-footer-item
+.bu-card-footer-item
   align-items: center
   display: flex
   flex-basis: 0
@@ -98,6 +98,6 @@ $card-media-margin: $block-spacing !default
 
 // Combinations
 
-.card
+.bu-card
   .media:not(:last-child)
     margin-bottom: $card-media-margin

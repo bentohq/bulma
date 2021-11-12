@@ -49,7 +49,7 @@ $button-colors: $colors !default
 =button-small
   &:not(.is-rounded)
     border-radius: $radius-small
-  font-size: $size-small
+    font-size: $size-small
 =button-normal
   font-size: $size-normal
 =button-medium
@@ -57,7 +57,7 @@ $button-colors: $colors !default
 =button-large
   font-size: $size-large
 
-.button
+.bu-button
   @extend %control
   @extend %unselectable
   background-color: $button-background-color
@@ -67,16 +67,16 @@ $button-colors: $colors !default
   cursor: pointer
   @if $button-family
     font-family: $button-family
-  justify-content: center
-  padding-bottom: $button-padding-vertical
-  padding-left: $button-padding-horizontal
-  padding-right: $button-padding-horizontal
-  padding-top: $button-padding-vertical
-  text-align: center
-  white-space: nowrap
+    justify-content: center
+    padding-bottom: $button-padding-vertical
+    padding-left: $button-padding-horizontal
+    padding-right: $button-padding-horizontal
+    padding-top: $button-padding-vertical
+    text-align: center
+    white-space: nowrap
   strong
     color: inherit
-  .icon
+  .bu-icon
     &,
     &.is-small,
     &.is-medium,
@@ -283,12 +283,12 @@ $button-colors: $colors !default
     padding-left: calc(#{$button-padding-horizontal} + 0.25em)
     padding-right: calc(#{$button-padding-horizontal} + 0.25em)
 
-.buttons
+.bu-buttons
   align-items: center
   display: flex
   flex-wrap: wrap
   justify-content: flex-start
-  .button
+  .bu-button
     margin-bottom: 0.5rem
     &:not(:last-child):not(.is-fullwidth)
       +ltr-property("margin", 0.5rem)
@@ -298,16 +298,16 @@ $button-colors: $colors !default
     margin-bottom: 1rem
   // Sizes
   &.are-small
-    .button:not(.is-normal):not(.is-medium):not(.is-large)
+    .bu-button:not(.is-normal):not(.is-medium):not(.is-large)
       +button-small
   &.are-medium
-    .button:not(.is-small):not(.is-normal):not(.is-large)
+    .bu-button:not(.is-small):not(.is-normal):not(.is-large)
       +button-medium
   &.are-large
-    .button:not(.is-small):not(.is-normal):not(.is-medium)
+    .bu-button:not(.is-small):not(.is-normal):not(.is-medium)
       +button-large
   &.has-addons
-    .button
+    .bu-button
       &:not(:first-child)
         border-bottom-left-radius: 0
         border-top-left-radius: 0
@@ -334,12 +334,12 @@ $button-colors: $colors !default
   &.is-centered
     justify-content: center
     &:not(.has-addons)
-      .button:not(.is-fullwidth)
+      .bu-button:not(.is-fullwidth)
         margin-left: 0.25rem
         margin-right: 0.25rem
   &.is-right
     justify-content: flex-end
     &:not(.has-addons)
-      .button:not(.is-fullwidth)
+      .bu-button:not(.is-fullwidth)
         margin-left: 0.25rem
         margin-right: 0.25rem

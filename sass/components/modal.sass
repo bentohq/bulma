@@ -32,7 +32,7 @@ $modal-card-body-padding: 20px !default
 
 $modal-breakpoint: $tablet !default
 
-.modal
+.bu-modal
   @extend %overlay
   align-items: center
   display: none
@@ -45,12 +45,12 @@ $modal-breakpoint: $tablet !default
   &.is-active
     display: flex
 
-.modal-background
+.bu-modal-background
   @extend %overlay
   background-color: $modal-background-background-color
 
-.modal-content,
-.modal-card
+.bu-modal-content,
+.bu-modal-card
   margin: 0 $modal-content-margin-mobile
   max-height: calc(100vh - #{$modal-content-spacing-mobile})
   overflow: auto
@@ -62,7 +62,7 @@ $modal-breakpoint: $tablet !default
     max-height: calc(100vh - #{$modal-content-spacing-tablet})
     width: $modal-content-width
 
-.modal-close
+.bu-modal-close
   @extend %delete
   background: none
   height: $modal-close-dimensions
@@ -71,15 +71,15 @@ $modal-breakpoint: $tablet !default
   top: $modal-close-top
   width: $modal-close-dimensions
 
-.modal-card
+.bu-modal-card
   display: flex
   flex-direction: column
   max-height: calc(100vh - #{$modal-card-spacing})
   overflow: hidden
   -ms-overflow-y: visible
 
-.modal-card-head,
-.modal-card-foot
+.bu-modal-card-head,
+.bu-modal-card-foot
   align-items: center
   background-color: $modal-card-head-background-color
   display: flex
@@ -88,27 +88,27 @@ $modal-breakpoint: $tablet !default
   padding: $modal-card-head-padding
   position: relative
 
-.modal-card-head
+.bu-modal-card-head
   border-bottom: $modal-card-head-border-bottom
   border-top-left-radius: $modal-card-head-radius
   border-top-right-radius: $modal-card-head-radius
 
-.modal-card-title
+.bu-modal-card-title
   color: $modal-card-title-color
   flex-grow: 1
   flex-shrink: 0
   font-size: $modal-card-title-size
   line-height: $modal-card-title-line-height
 
-.modal-card-foot
+.bu-modal-card-foot
   border-bottom-left-radius: $modal-card-foot-radius
   border-bottom-right-radius: $modal-card-foot-radius
   border-top: $modal-card-foot-border-top
-  .button
+  .bu-button
     &:not(:last-child)
       +ltr-property("margin", 0.5em)
 
-.modal-card-body
+.bu-modal-card-body
   +overflow-touch
   background-color: $modal-card-body-background-color
   flex-grow: 1

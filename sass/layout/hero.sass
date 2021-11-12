@@ -9,14 +9,14 @@ $hero-body-padding-large: 18rem 6rem !default
 $hero-colors: $colors !default
 
 // Main container
-.hero
+.bu-hero
   align-items: stretch
   display: flex
   flex-direction: column
   justify-content: space-between
-  .navbar
+  .bu-navbar
     background: none
-  .tabs
+  .bu-tabs
     ul
       border-bottom: none
   // Colors
@@ -29,26 +29,26 @@ $hero-colors: $colors !default
       a:not(.button):not(.dropdown-item):not(.tag):not(.pagination-link.is-current),
       strong
         color: inherit
-      .title
+      .bu-title
         color: $color-invert
-      .subtitle
+      .bu-subtitle
         color: bulmaRgba($color-invert, 0.9)
         a:not(.button),
         strong
           color: $color-invert
-      .navbar-menu
+      .bu-navbar-menu
         +touch
           background-color: $color
-      .navbar-item,
-      .navbar-link
+      .bu-navbar-item,
+      .bu-navbar-link
         color: bulmaRgba($color-invert, 0.7)
-      a.navbar-item,
-      .navbar-link
+      a.bu-navbar-item,
+      .bu-navbar-link
         &:hover,
         &.is-active
           background-color: bulmaDarken($color, 5%)
           color: $color-invert
-      .tabs
+      .bu-tabs
         a
           color: $color-invert
           opacity: 0.9
@@ -77,24 +77,24 @@ $hero-colors: $colors !default
           $gradient-bottom-right: lighten(saturate(adjust-hue($color, 10deg), 5%), 5%)
           background-image: linear-gradient(141deg, $gradient-top-left 0%, $color 71%, $gradient-bottom-right 100%)
           +mobile
-            .navbar-menu
+            .bu-navbar-menu
               background-image: linear-gradient(141deg, $gradient-top-left 0%, $color 71%, $gradient-bottom-right 100%)
   // Sizes
   &.is-small
-    .hero-body
+    .bu-hero-body
       padding: $hero-body-padding-small
   &.is-medium
     +tablet
-      .hero-body
+      .bu-hero-body
         padding: $hero-body-padding-medium
   &.is-large
     +tablet
-      .hero-body
+      .bu-hero-body
         padding: $hero-body-padding-large
   &.is-halfheight,
   &.is-fullheight,
   &.is-fullheight-with-navbar
-    .hero-body
+    .bu-hero-body
       align-items: center
       display: flex
       & > .container
@@ -107,7 +107,7 @@ $hero-colors: $colors !default
 
 // Components
 
-.hero-video
+.bu-hero-video
   @extend %overlay
   overflow: hidden
   video
@@ -124,7 +124,7 @@ $hero-colors: $colors !default
   +mobile
     display: none
 
-.hero-buttons
+.bu-hero-buttons
   margin-top: 1.5rem
   // Responsiveness
   +mobile
@@ -140,12 +140,12 @@ $hero-colors: $colors !default
 
 // Containers
 
-.hero-head,
-.hero-foot
+.bu-hero-head,
+.bu-hero-foot
   flex-grow: 0
   flex-shrink: 0
 
-.hero-body
+.bu-hero-body
   flex-grow: 1
   flex-shrink: 0
   padding: $hero-body-padding

@@ -35,7 +35,7 @@ $pagination-ellipsis-color: $grey-light !default
 
 $pagination-shadow-inset: inset 0 1px 2px rgba($scheme-invert, 0.2) !default
 
-.pagination
+.bu-pagination
   @extend %block
   font-size: $size-normal
   margin: $pagination-margin
@@ -47,25 +47,25 @@ $pagination-shadow-inset: inset 0 1px 2px rgba($scheme-invert, 0.2) !default
   &.is-large
     font-size: $size-large
   &.is-rounded
-    .pagination-previous,
-    .pagination-next
+    .bu-pagination-previous,
+    .bu-pagination-next
       padding-left: 1em
       padding-right: 1em
       border-radius: $radius-rounded
-    .pagination-link
+    .bu-pagination-link
       border-radius: $radius-rounded
 
-.pagination,
-.pagination-list
+.bu-pagination,
+.bu-pagination-list
   align-items: center
   display: flex
   justify-content: center
   text-align: center
 
-.pagination-previous,
-.pagination-next,
-.pagination-link,
-.pagination-ellipsis
+.bu-pagination-previous,
+.bu-pagination-next,
+.bu-pagination-link,
+.bu-pagination-ellipsis
   @extend %control
   @extend %unselectable
   font-size: $pagination-item-font-size
@@ -75,9 +75,9 @@ $pagination-shadow-inset: inset 0 1px 2px rgba($scheme-invert, 0.2) !default
   padding-right: $pagination-item-padding-right
   text-align: center
 
-.pagination-previous,
-.pagination-next,
-.pagination-link
+.bu-pagination-previous,
+.bu-pagination-next,
+.bu-pagination-link
   border-color: $pagination-border-color
   color: $pagination-color
   min-width: $pagination-min-width
@@ -96,72 +96,72 @@ $pagination-shadow-inset: inset 0 1px 2px rgba($scheme-invert, 0.2) !default
     color: $pagination-disabled-color
     opacity: 0.5
 
-.pagination-previous,
-.pagination-next
+.bu-pagination-previous,
+.bu-pagination-next
   padding-left: $pagination-nav-padding-left
   padding-right: $pagination-nav-padding-right
   white-space: nowrap
 
-.pagination-link
+.bu-pagination-link
   &.is-current
     background-color: $pagination-current-background-color
     border-color: $pagination-current-border-color
     color: $pagination-current-color
 
-.pagination-ellipsis
+.bu-pagination-ellipsis
   color: $pagination-ellipsis-color
   pointer-events: none
 
-.pagination-list
+.bu-pagination-list
   flex-wrap: wrap
   li
     list-style: none
 
 +mobile
-  .pagination
+  .bu-pagination
     flex-wrap: wrap
-  .pagination-previous,
-  .pagination-next
+  .bu-pagination-previous,
+  .bu-pagination-next
     flex-grow: 1
     flex-shrink: 1
-  .pagination-list
+  .bu-pagination-list
     li
       flex-grow: 1
       flex-shrink: 1
 
 +tablet
-  .pagination-list
+  .bu-pagination-list
     flex-grow: 1
     flex-shrink: 1
     justify-content: flex-start
     order: 1
-  .pagination-previous,
-  .pagination-next,
-  .pagination-link,
-  .pagination-ellipsis
+  .bu-pagination-previous,
+  .bu-pagination-next,
+  .bu-pagination-link,
+  .bu-pagination-ellipsis
     margin-bottom: 0
     margin-top: 0
-  .pagination-previous
+  .bu-pagination-previous
     order: 2
-  .pagination-next
+  .bu-pagination-next
     order: 3
-  .pagination
+  .bu-pagination
     justify-content: space-between
     margin-bottom: 0
     margin-top: 0
     &.is-centered
-      .pagination-previous
+      .bu-pagination-previous
         order: 1
-      .pagination-list
+      .bu-pagination-list
         justify-content: center
         order: 2
-      .pagination-next
+      .bu-pagination-next
         order: 3
     &.is-right
-      .pagination-previous
+      .bu-pagination-previous
         order: 1
-      .pagination-next
+      .bu-pagination-next
         order: 2
-      .pagination-list
+      .bu-pagination-list
         justify-content: flex-end
         order: 3

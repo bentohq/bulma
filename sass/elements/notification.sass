@@ -9,7 +9,7 @@ $notification-padding-rtl: 1.25rem 1.5rem 1.25rem 2.5rem !default
 
 $notification-colors: $colors !default
 
-.notification
+.bu-notification
   @extend %block
   background-color: $notification-background-color
   border-radius: $notification-radius
@@ -18,7 +18,7 @@ $notification-colors: $colors !default
     padding: $notification-padding-ltr
   +rtl
     padding: $notification-padding-rtl
-  a:not(.button):not(.dropdown-item)
+  a:not(.bu-button):not(.bu-dropdown-item)
     color: currentColor
     text-decoration: underline
   strong
@@ -28,13 +28,13 @@ $notification-colors: $colors !default
     background: $notification-code-background-color
   pre code
     background: transparent
-  & > .delete
+  & > .bu-delete
     +ltr-position(0.5rem)
     position: absolute
     top: 0.5rem
-  .title,
-  .subtitle,
-  .content
+  .bu-title,
+  .bu-subtitle,
+  .bu-content
     color: currentColor
   // Colors
   @each $name, $pair in $notification-colors

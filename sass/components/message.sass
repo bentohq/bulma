@@ -21,7 +21,7 @@ $message-body-pre-code-background-color: transparent !default
 $message-header-body-border-width: 0 !default
 $message-colors: $colors !default
 
-.message
+.bu-message
   @extend %block
   background-color: $message-background-color
   border-radius: $message-radius
@@ -67,7 +67,7 @@ $message-colors: $colors !default
         border-color: $color
         color: $color-dark
 
-.message-header
+.bu-message-header
   align-items: center
   background-color: $message-header-background-color
   border-radius: $message-header-radius $message-header-radius 0 0
@@ -78,16 +78,16 @@ $message-colors: $colors !default
   line-height: 1.25
   padding: $message-header-padding
   position: relative
-  .delete
+  .bu-delete
     flex-grow: 0
     flex-shrink: 0
     +ltr-property("margin", 0.75em, false)
-  & + .message-body
+  & + .bu-message-body
     border-width: $message-header-body-border-width
     border-top-left-radius: 0
     border-top-right-radius: 0
 
-.message-body
+.bu-message-body
   border-color: $message-body-border-color
   border-radius: $message-body-radius
   border-style: solid

@@ -2,7 +2,7 @@
 
 $level-item-spacing: ($block-spacing * 0.5) !default
 
-.level
+.bu-level
   @extend %block
   align-items: center
   justify-content: space-between
@@ -14,12 +14,12 @@ $level-item-spacing: ($block-spacing * 0.5) !default
   // Modifiers
   &.is-mobile
     display: flex
-    .level-left,
-    .level-right
+    .bu-level-left,
+    .bu-level-right
       display: flex
-    .level-left + .level-right
+    .bu-level-left + .bu-level-right
       margin-top: 0
-    .level-item
+    .bu-level-item
       &:not(:last-child)
         margin-bottom: 0
         +ltr-property("margin", $level-item-spacing)
@@ -32,27 +32,27 @@ $level-item-spacing: ($block-spacing * 0.5) !default
       &:not(.is-narrow)
         flex-grow: 1
 
-.level-item
+.bu-level-item
   align-items: center
   display: flex
   flex-basis: auto
   flex-grow: 0
   flex-shrink: 0
   justify-content: center
-  .title,
-  .subtitle
+  .bu-title,
+  .bu-subtitle
     margin-bottom: 0
   // Responsiveness
   +mobile
     &:not(:last-child)
       margin-bottom: $level-item-spacing
 
-.level-left,
-.level-right
+.bu-level-left,
+.bu-level-right
   flex-basis: auto
   flex-grow: 0
   flex-shrink: 0
-  .level-item
+  .bu-level-item
     // Modifiers
     &.is-flexible
       flex-grow: 1
@@ -61,17 +61,17 @@ $level-item-spacing: ($block-spacing * 0.5) !default
       &:not(:last-child)
         +ltr-property("margin", $level-item-spacing)
 
-.level-left
+.bu-level-left
   align-items: center
   justify-content: flex-start
   // Responsiveness
   +mobile
-    & + .level-right
+    & + .bu-level-right
       margin-top: 1.5rem
   +tablet
     display: flex
 
-.level-right
+.bu-level-right
   align-items: center
   justify-content: flex-end
   // Responsiveness

@@ -56,7 +56,7 @@ $navbar-colors: $colors !default
   right: 0
   z-index: $navbar-fixed-z
 
-.navbar
+.bu-navbar
   background-color: $navbar-background-color
   min-height: $navbar-height
   position: relative
@@ -67,45 +67,45 @@ $navbar-colors: $colors !default
     &.is-#{$name}
       background-color: $color
       color: $color-invert
-      .navbar-brand
-        & > .navbar-item,
-        .navbar-link
+      .bu-navbar-brand
+        & > .bu-navbar-item,
+        .bu-navbar-link
           color: $color-invert
-        & > a.navbar-item,
-        .navbar-link
+        & > a.bu-navbar-item,
+        .bu-navbar-link
           &:focus,
           &:hover,
           &.is-active
             background-color: bulmaDarken($color, 5%)
             color: $color-invert
-        .navbar-link
+        .bu-navbar-link
           &::after
             border-color: $color-invert
-      .navbar-burger
+      .nbu-avbar-burger
         color: $color-invert
       +from($navbar-breakpoint)
-        .navbar-start,
-        .navbar-end
-          & > .navbar-item,
-          .navbar-link
+        .bu-navbar-start,
+        .bu-navbar-end
+          & > .bu-navbar-item,
+          .bu-navbar-link
             color: $color-invert
-          & > a.navbar-item,
-          .navbar-link
+          & > a.bu-navbar-item,
+          .bu-navbar-link
             &:focus,
             &:hover,
             &.is-active
               background-color: bulmaDarken($color, 5%)
               color: $color-invert
-          .navbar-link
+          .bu-navbar-link
             &::after
               border-color: $color-invert
-        .navbar-item.has-dropdown:focus .navbar-link,
-        .navbar-item.has-dropdown:hover .navbar-link,
-        .navbar-item.has-dropdown.is-active .navbar-link
+        .navbar-item.has-dropdown:focus .bu-navbar-link,
+        .navbar-item.has-dropdown:hover .bu-navbar-link,
+        .navbar-item.has-dropdown.is-active .bu-navbar-link
           background-color: bulmaDarken($color, 5%)
           color: $color-invert
-        .navbar-dropdown
-          a.navbar-item
+        .bu-navbar-dropdown
+          a.bu-navbar-item
             &.is-active
               background-color: $color
               color: $color-invert
@@ -133,48 +133,48 @@ body
   &.has-navbar-fixed-bottom
     padding-bottom: $navbar-height
 
-.navbar-brand,
-.navbar-tabs
+.bu-navbar-brand,
+.bu-navbar-tabs
   align-items: stretch
   display: flex
   flex-shrink: 0
   min-height: $navbar-height
 
-.navbar-brand
-  a.navbar-item
+.bu-navbar-brand
+  a.bu-navbar-item
     &:focus,
     &:hover
       background-color: transparent
 
-.navbar-tabs
+.bu-navbar-tabs
   +overflow-touch
   max-width: 100vw
   overflow-x: auto
   overflow-y: hidden
 
-.navbar-burger
+.bu-navbar-burger
   @extend %reset
   color: $navbar-burger-color
   +hamburger($navbar-height)
   +ltr-property("margin", auto, false)
 
-.navbar-menu
+.bu-navbar-menu
   display: none
 
-.navbar-item,
-.navbar-link
+.bu-navbar-item,
+.bu-navbar-link
   color: $navbar-item-color
   display: block
   line-height: 1.5
   padding: 0.5rem 0.75rem
   position: relative
-  .icon
+  .bu-icon
     &:only-child
       margin-left: -0.25rem
       margin-right: -0.25rem
 
-a.navbar-item,
-.navbar-link
+a.bu-navbar-item,
+.bu-navbar-link
   cursor: pointer
   &:focus,
   &:focus-within,
@@ -183,7 +183,7 @@ a.navbar-item,
     background-color: $navbar-item-hover-background-color
     color: $navbar-item-hover-color
 
-.navbar-item
+.bu-navbar-item
   flex-grow: 0
   flex-shrink: 0
   img
@@ -209,11 +209,11 @@ a.navbar-item,
       color: $navbar-tab-active-color
       padding-bottom: calc(0.5rem - #{$navbar-tab-active-border-bottom-width})
 
-.navbar-content
+.bu-navbar-content
   flex-grow: 1
   flex-shrink: 1
 
-.navbar-link:not(.is-arrowless)
+.bu-navbar-link:not(.is-arrowless)
   +ltr-property("padding", 2.5em)
   &::after
     @extend %arrow
@@ -221,15 +221,15 @@ a.navbar-item,
     margin-top: -0.375em
     +ltr-position(1.125em)
 
-.navbar-dropdown
+.bu-navbar-dropdown
   font-size: 0.875rem
   padding-bottom: 0.5rem
   padding-top: 0.5rem
-  .navbar-item
+  .bu-navbar-item
     padding-left: 1.5rem
     padding-right: 1.5rem
 
-.navbar-divider
+.bu-navbar-divider
   background-color: $navbar-divider-background-color
   border: none
   display: none
@@ -237,24 +237,24 @@ a.navbar-item,
   margin: 0.5rem 0
 
 +until($navbar-breakpoint)
-  .navbar > .container
+  .bu-navbar > .bu-container
     display: block
-  .navbar-brand,
-  .navbar-tabs
-    .navbar-item
+  .bu-navbar-brand,
+  .bu-navbar-tabs
+    .bu-navbar-item
       align-items: center
       display: flex
-  .navbar-link
+  .bu-navbar-link
     &::after
       display: none
-  .navbar-menu
+  .bu-navbar-menu
     background-color: $navbar-background-color
     box-shadow: 0 8px 16px bulmaRgba($scheme-invert, 0.1)
     padding: 0.5rem 0
     &.is-active
       display: block
   // Fixed navbar
-  .navbar
+  .bu-navbar
     &.is-fixed-bottom-touch,
     &.is-fixed-top-touch
       +navbar-fixed
@@ -266,7 +266,7 @@ a.navbar-item,
       top: 0
     &.is-fixed-top,
     &.is-fixed-top-touch
-      .navbar-menu
+      .bu-navbar-menu
         +overflow-touch
         max-height: calc(100vh - #{$navbar-height})
         overflow: auto
@@ -278,30 +278,30 @@ a.navbar-item,
       padding-bottom: $navbar-height
 
 +from($navbar-breakpoint)
-  .navbar,
-  .navbar-menu,
-  .navbar-start,
-  .navbar-end
+  .bu-navbar,
+  .bu-navbar-menu,
+  .bu-navbar-start,
+  .bu-navbar-end
     align-items: stretch
     display: flex
-  .navbar
+  .bu-navbar
     min-height: $navbar-height
     &.is-spaced
       padding: $navbar-padding-vertical $navbar-padding-horizontal
-      .navbar-start,
-      .navbar-end
+      .bu-navbar-start,
+      .bu-navbar-end
         align-items: center
-      a.navbar-item,
-      .navbar-link
+      a.bu-navbar-item,
+      .bu-navbar-link
         border-radius: $radius
     &.is-transparent
-      a.navbar-item,
-      .navbar-link
+      a.bu-navbar-item,
+      .bu-navbar-link
         &:focus,
         &:hover,
         &.is-active
           background-color: transparent !important
-      .navbar-item.has-dropdown
+      .bu-navbar-item.has-dropdown
         &.is-active,
         &.is-hoverable:focus,
         &.is-hoverable:focus-within,
@@ -309,7 +309,7 @@ a.navbar-item,
           .navbar-link
             background-color: transparent !important
       .navbar-dropdown
-        a.navbar-item
+        a.bu-navbar-item
           &:focus,
           &:hover
             background-color: $navbar-dropdown-item-hover-background-color
@@ -317,19 +317,19 @@ a.navbar-item,
           &.is-active
             background-color: $navbar-dropdown-item-active-background-color
             color: $navbar-dropdown-item-active-color
-  .navbar-burger
+  .bu-navbar-burger
     display: none
-  .navbar-item,
-  .navbar-link
+  .bu-navbar-item,
+  .bu-navbar-link
     align-items: center
     display: flex
-  .navbar-item
+  .bu-navbar-item
     &.has-dropdown
       align-items: stretch
     &.has-dropdown-up
-      .navbar-link::after
+      .bu-navbar-link::after
         transform: rotate(135deg) translate(0.25em, -0.25em)
-      .navbar-dropdown
+      .bu-navbar-dropdown
         border-bottom: $navbar-dropdown-border-top
         border-radius: $navbar-dropdown-radius $navbar-dropdown-radius 0 0
         border-top: none
@@ -340,23 +340,23 @@ a.navbar-item,
     &.is-hoverable:focus,
     &.is-hoverable:focus-within,
     &.is-hoverable:hover
-      .navbar-dropdown
+      .bu-navbar-dropdown
         display: block
-        .navbar.is-spaced &,
+        .bu-navbar.is-spaced &,
         &.is-boxed
           opacity: 1
           pointer-events: auto
           transform: translateY(0)
-  .navbar-menu
+  .bu-navbar-menu
     flex-grow: 1
     flex-shrink: 0
-  .navbar-start
+  .bu-navbar-start
     justify-content: flex-start
     +ltr-property("margin", auto)
-  .navbar-end
+  .bu-navbar-end
     justify-content: flex-end
     +ltr-property("margin", auto, false)
-  .navbar-dropdown
+  .bu-navbar-dropdown
     background-color: $navbar-dropdown-background-color
     border-bottom-left-radius: $navbar-dropdown-radius
     border-bottom-right-radius: $navbar-dropdown-radius
@@ -369,10 +369,10 @@ a.navbar-item,
     position: absolute
     top: 100%
     z-index: $navbar-dropdown-z
-    .navbar-item
+    .bu-navbar-item
       padding: 0.375rem 1rem
       white-space: nowrap
-    a.navbar-item
+    a.bu-navbar-item
       +ltr-property("padding", 3rem)
       &:focus,
       &:hover
@@ -381,7 +381,7 @@ a.navbar-item,
       &.is-active
         background-color: $navbar-dropdown-item-active-background-color
         color: $navbar-dropdown-item-active-color
-    .navbar.is-spaced &,
+    .bu-navbar.is-spaced &,
     &.is-boxed
       border-radius: $navbar-dropdown-boxed-radius
       border-top: none
@@ -396,16 +396,16 @@ a.navbar-item,
     &.is-right
       left: auto
       right: 0
-  .navbar-divider
+  .bu-navbar-divider
     display: block
-  .navbar > .container,
-  .container > .navbar
-    .navbar-brand
+  .bu-navbar > .bu-container,
+  .bu-container > .bu-navbar
+    .bu-navbar-brand
       +ltr-property("margin", -.75rem, false)
-    .navbar-menu
+    .bu-navbar-menu
       +ltr-property("margin", -.75rem)
   // Fixed navbar
-  .navbar
+  .bu-navbar
     &.is-fixed-bottom-desktop,
     &.is-fixed-top-desktop
       +navbar-fixed
@@ -426,21 +426,21 @@ a.navbar-item,
     &.has-spaced-navbar-fixed-bottom
       padding-bottom: $navbar-height + ($navbar-padding-vertical * 2)
   // Hover/Active states
-  a.navbar-item,
-  .navbar-link
+  a.bu-navbar-item,
+  .bu-navbar-link
     &.is-active
       color: $navbar-item-active-color
     &.is-active:not(:focus):not(:hover)
       background-color: $navbar-item-active-background-color
-  .navbar-item.has-dropdown
+  .bu-navbar-item.has-dropdown
     &:focus,
     &:hover,
     &.is-active
-      .navbar-link
+      .bu-navbar-link
         background-color: $navbar-item-hover-background-color
 
 // Combination
 
-.hero
+.bu-hero
   &.is-fullheight-with-navbar
     min-height: calc(100vh - #{$navbar-height})

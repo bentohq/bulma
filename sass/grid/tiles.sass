@@ -2,7 +2,7 @@
 
 $tile-spacing: 0.75rem !default
 
-.tile
+.bu-tile
   align-items: stretch
   display: block
   flex-basis: 0
@@ -24,7 +24,7 @@ $tile-spacing: 0.75rem !default
     padding: $tile-spacing
   &.is-vertical
     flex-direction: column
-    & > .tile.is-child:not(:last-child)
+    & > .bu-tile.is-child:not(:last-child)
       margin-bottom: 1.5rem !important
   // Responsiveness
   +tablet

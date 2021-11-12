@@ -5,7 +5,7 @@ $help-size: $size-small !default
 
 $label-colors: $form-colors !default
 
-.label
+.bu-label
   color: $label-color
   display: block
   font-size: $size-normal
@@ -20,7 +20,7 @@ $label-colors: $form-colors !default
   &.is-large
     font-size: $size-large
 
-.help
+.bu-help
   display: block
   font-size: $help-size
   margin-top: 0.25rem
@@ -31,25 +31,25 @@ $label-colors: $form-colors !default
 
 // Containers
 
-.field
+.bu-field
   &:not(:last-child)
     margin-bottom: 0.75rem
   // Modifiers
   &.has-addons
     display: flex
     justify-content: flex-start
-    .control
+    .bu-control
       &:not(:last-child)
         +ltr-property("margin", -1px)
       &:not(:first-child):not(:last-child)
-        .button,
-        .input,
-        .select select
+        .bu-button,
+        .bu-input,
+        .bu-select select
           border-radius: 0
       &:first-child:not(:only-child)
-        .button,
-        .input,
-        .select select
+        .bu-button,
+        .bu-input,
+        .bu-select select
           +ltr
             border-bottom-right-radius: 0
             border-top-right-radius: 0
@@ -57,18 +57,18 @@ $label-colors: $form-colors !default
             border-bottom-left-radius: 0
             border-top-left-radius: 0
       &:last-child:not(:only-child)
-        .button,
-        .input,
-        .select select
+        .bu-button,
+        .bu-input,
+        .bu-select select
           +ltr
             border-bottom-left-radius: 0
             border-top-left-radius: 0
           +rtl
             border-bottom-right-radius: 0
             border-top-right-radius: 0
-      .button,
-      .input,
-      .select select
+      .bu-button,
+      .bu-input,
+      .bu-select select
         &:not([disabled])
           &:hover,
           &.is-hovered
@@ -88,13 +88,13 @@ $label-colors: $form-colors !default
     &.has-addons-right
       justify-content: flex-end
     &.has-addons-fullwidth
-      .control
+      .bu-control
         flex-grow: 1
         flex-shrink: 0
   &.is-grouped
     display: flex
     justify-content: flex-start
-    & > .control
+    & > .bu-control
       flex-shrink: 0
       &:not(:last-child)
         margin-bottom: 0
@@ -108,7 +108,7 @@ $label-colors: $form-colors !default
       justify-content: flex-end
     &.is-grouped-multiline
       flex-wrap: wrap
-      & > .control
+      & > .bu-control
         &:last-child,
         &:not(:last-child)
           margin-bottom: 0.75rem
@@ -120,8 +120,8 @@ $label-colors: $form-colors !default
     +tablet
       display: flex
 
-.field-label
-  .label
+.bu-field-label
+  .bu-label
     font-size: inherit
   +mobile
     margin-bottom: 0.5rem
@@ -143,24 +143,24 @@ $label-colors: $form-colors !default
       font-size: $size-large
       padding-top: 0.375em
 
-.field-body
-  .field .field
+.bu-field-body
+  .bu-field .bu-field
     margin-bottom: 0
   +tablet
     display: flex
     flex-basis: 0
     flex-grow: 5
     flex-shrink: 1
-    .field
+    .bu-field
       margin-bottom: 0
-    & > .field
+    & > .bu-field
       flex-shrink: 1
       &:not(.is-narrow)
         flex-grow: 1
       &:not(:last-child)
         +ltr-property("margin", 0.75rem)
 
-.control
+.bu-control
   box-sizing: border-box
   clear: both
   font-size: $size-normal
@@ -169,8 +169,8 @@ $label-colors: $form-colors !default
   // Modifiers
   &.has-icons-left,
   &.has-icons-right
-    .input,
-    .select
+    .bu-input,
+    .bu-select
       &:focus
         & ~ .icon
           color: $input-icon-active-color
@@ -189,14 +189,14 @@ $label-colors: $form-colors !default
       width: $input-height
       z-index: 4
   &.has-icons-left
-    .input,
-    .select select
+    .bu-input,
+    .bu-select select
       padding-left: $input-height
     .icon.is-left
       left: 0
   &.has-icons-right
-    .input,
-    .select select
+    .bu-input,
+    .bu-select select
       padding-right: $input-height
     .icon.is-right
       right: 0
