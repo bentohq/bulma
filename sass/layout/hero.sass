@@ -26,14 +26,14 @@ $hero-colors: $colors !default
     &.is-#{$name}
       background-color: $color
       color: $color-invert
-      a:not(.button):not(.dropdown-item):not(.tag):not(.pagination-link.is-current),
+      a:not(.bu-button):not(.dropdown-item):not(.tag):not(.pagination-link.is-current),
       strong
         color: inherit
       .bu-title
         color: $color-invert
       .bu-subtitle
         color: bulmaRgba($color-invert, 0.9)
-        a:not(.button),
+        a:not(.bu-button),
         strong
           color: $color-invert
       .bu-navbar-menu
@@ -128,14 +128,14 @@ $hero-colors: $colors !default
   margin-top: 1.5rem
   // Responsiveness
   +mobile
-    .button
+    .bu-button
       display: flex
       &:not(:last-child)
         margin-bottom: 0.75rem
   +tablet
     display: flex
     justify-content: center
-    .button:not(:last-child)
+    .bu-button:not(:last-child)
       +ltr-property("margin", 1.5rem)
 
 // Containers
