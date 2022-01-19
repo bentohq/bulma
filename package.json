@@ -30,6 +30,7 @@
     "autoprefixer": "^9.8.6",
     "clean-css-cli": "^4.3.0",
     "node-sass": "^7.0.1",
+    "postcss": "^8.2.13",
     "postcss-cli": "^9.1.0",
     "rimraf": "^3.0.2"
   },
@@ -52,5 +53,8 @@
     "bulma.sass",
     "LICENSE",
     "README.md"
-  ]
+  ],
+  "dependencies": {
+    "docs": "^0.3.2-canary.0"
+  }
 }
